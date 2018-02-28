@@ -1,0 +1,4 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Wed Mar 15 13:51:14 CST 2017
+7df90e7558d611a59204f11d7934abd4c0607e56@default-snapshots-http\://netmine.vicp.net\:8081/nexus/content/repositories/snapshots/.lastUpdated=1489557074915
+http\://netmine.vicp.net\:8081/nexus/content/repositories/snapshots/.error=Could not transfer artifact com.cyou.fz.commons\:mybatis-selecterplus\:pom\:2.0.1-20170309.072027-2 from/to snapshots (http\://netmine.vicp.net\:8081/nexus/content/repositories/snapshots)\: Connect to netmine.vicp.net\:8081 [netmine.vicp.net/112.5.248.182] failed\: Operation timed out

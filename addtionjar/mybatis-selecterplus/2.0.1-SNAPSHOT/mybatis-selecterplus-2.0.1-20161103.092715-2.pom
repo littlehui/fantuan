@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.cyou.fz.commons</groupId>
+    <artifactId>mybatis-selecterplus</artifactId>
+    <version>2.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <!-- 配置远程发布到私服，mvn deploy -->
+<!--
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <name>Nexus Release Repository</name>
+            <url>http://10.59.94.24:8081/nexus/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Nexus Snapshot Repository</name>
+            <url>http://10.59.94.24:8081/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+-->
+<!--    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <name>Nexus Release Repository</name>
+            <url>http://netmine.vicp.net:8081/nexus/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Nexus Snapshot Repository</name>
+            <url>http://netmine.vicp.net:8081/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>-->
+
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <name>Releases</name>
+            <url>http://mvnrepos.dev.17173.com:8081/nexus/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Snapshots</name>
+            <url>http://mvnrepos.dev.17173.com:8081/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <confPath>local</confPath>
+        <dubbo.version>2.5.3-p3</dubbo.version>
+        <zookeeper.version>3.3.3</zookeeper.version>
+        <zkclient.version>0.1</zkclient.version>
+        <commons-logging.version>1.1.1</commons-logging.version>
+        <commons-lang.version>2.4</commons-lang.version>
+        <commons-collections.version>3.2.1</commons-collections.version>
+        <commons-beanutils.version>1.8.1</commons-beanutils.version>
+        <commons-codec.version>1.4</commons-codec.version>
+        <commons-fileupload.version>1.2.2</commons-fileupload.version>
+        <commons-io.version>1.3.2</commons-io.version>
+        <commons-compress.version>1.4.1</commons-compress.version>
+        <spring.version>3.2.2.RELEASE</spring.version>
+        <spring-security.version>3.1.4.RELEASE</spring-security.version>
+        <aspectj.version>1.7.1</aspectj.version>
+        <aopalliance.version>1.0</aopalliance.version>
+        <log4j.version>1.2.16</log4j.version>
+        <slf4j.version>1.6.2</slf4j.version>
+        <jackson.version>1.8.2</jackson.version>
+        <fasterxml-jackson.version>2.0.6</fasterxml-jackson.version>
+        <htmlparser.version>2.1</htmlparser.version>
+        <jdom.version>2.0.2</jdom.version>
+        <quartz-scheduler.version>1.8.6</quartz-scheduler.version>
+        <servlet-api.version>2.5</servlet-api.version>
+        <jta.version>1.0</jta.version>
+        <mail.version>1.0</mail.version>
+        <javaee.version>1.0</javaee.version>
+        <freemarker.version>2.3.16</freemarker.version>
+        <opencsv.version>2.3</opencsv.version>
+        <java-unrar.version>0.3</java-unrar.version>
+        <rome.version>1.0</rome.version>
+        <kaptcha.version>2.3.2</kaptcha.version>
+        <im4java.version>1.4.0</im4java.version>
+        <java_memcached.version>2.5.1</java_memcached.version>
+        <xmemcached.version>1.4.1</xmemcached.version>
+        <mongo-java-driver.version>2.10.1</mongo-java-driver.version>
+        <luci-mint.version>1.2.0</luci-mint.version>
+        <asm.version>3.3.1</asm.version>
+        <cglib.version>2.2.2</cglib.version>
+        <hamcrest.version>1.1</hamcrest.version>
+        <junit.version>4.6</junit.version>
+        <testng.version>6.8.5</testng.version>
+        <spring-test-mvc.version>1.0.0.M2</spring-test-mvc.version>
+        <json-path.version>0.8.1</json-path.version>
+        <test-extension.version>0.1.6</test-extension.version>
+        <commons-httpclient.version>3.1</commons-httpclient.version>
+        <mybatis.version>3.4.0</mybatis.version>
+        <mybatis-spring.version>1.2.0</mybatis-spring.version>
+        <freemarker.version>2.3.20</freemarker.version>
+        <c3p0.version>0.9.1.2</c3p0.version>
+        <mysql.version>5.1.26</mysql.version>
+        <junit.version>4.11</junit.version>
+        <spring-test>3.2.0.RELEASE</spring-test>
+        <lombok.version>0.10.4</lombok.version>
+        <ermpapi.version>1.0.1</ermpapi.version>
+        <!-- junrar -->
+        <junrar.version>0.7</junrar.version>
+        <!-- commons jar's version -->
+        <commons-compress.version>1.5</commons-compress.version>
+        <commons-io.version>2.4</commons-io.version>
+        <commons-pool>1.6</commons-pool>
+    </properties>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>${commons-beanutils.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.belerweb</groupId>
+            <artifactId>pinyin4j</artifactId>
+            <version>2.5.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <!-- log lib -->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>${commons-lang.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>${mybatis.version}</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <!-- 设置jdk编译版本 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+
+            <!-- 部署时忽略测试插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.16</version>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.1</version>
+                <configuration>
+                    <attach>true</attach>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+
+    </build>
+
+</project>
