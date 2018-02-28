@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language-addon>
+    <addon-name>paginglistbox</addon-name>
+    <language-name>xul/html</language-name>
+    <component>
+        <component-name>paginglistbox</component-name>
+        <extends>idspace</extends>
+        <component-class>com.littlehui.fantuan.zk.listbox.component.PagingListbox</component-class>
+    </component>
+</language-addon>

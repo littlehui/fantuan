@@ -1,0 +1,43 @@
+<?page title="饭团GO 1.0" contentType="text/html;charset=UTF-8"?>
+<zk>
+    <window title="" id="indexWin" border=""
+            position="center" droppable="true" vflex="1" hflex="1">
+        <borderlayout vflex="1" hflex="1">
+            <north title="" minsize="300" size="7%" height="70px">
+                <toolbar vflex="1" hflex="1">
+                    <hbox>
+                        <label value="饭团GO" style="font-size:40px; font-weight:900"/>
+                        <hbox top="70%" width="100%" widths="30%,50%,20%">
+                            <label value="欢迎:" left="4000%"></label>
+                            <label value="登录用户" id="loginUserName"></label>
+                            <toolbarbutton id="logOutToolbarButton" label="登出" >
+                            </toolbarbutton>
+                        </hbox>
+                    </hbox>
+                </toolbar>
+            </north>
+            <center title="" style="filter:alpha(opacity=50)">
+                <borderlayout vflex="1" hflex="1">
+                    <west collapsible="true" splittable="true" size="10%">
+                        <include src="/zul/rechargeRange.zul"></include>
+                    </west>
+                    <center>
+                        <include src="/zul/userPriceList.zul"></include>
+                    </center>
+                    <east collapsible="true" splittable="true" size="10%">
+                        <include src="/zul/consumeRange.zul"></include>
+                    </east>
+                </borderlayout>
+
+            </center>
+            <south title="">
+                <div vflex="1" hflex="1">
+                    <label value="您正在使用饭团GO"
+                           style="color:black;font-size:20px"/>
+                </div>
+            </south>
+        </borderlayout>
+        <panel>
+        </panel>
+    </window>
+</zk>

@@ -1,0 +1,44 @@
+<zk>
+    <window id="rechargeListWin"
+            apply="com.littlehui.fantuan.controller.recharge.RechargeListController">
+        <panel>
+            <panelchildren>
+                <listbox id="rechargeListListBox" mold="paging" visible="true" multiple="true" rows="5" pageSize="15">
+                    <listhead>
+           <!--             <listheader label="账号"></listheader>-->
+                        <listheader label="名称"></listheader>
+                        <listheader label="充值金额"></listheader>
+                  <!--      <listheader label="充值详情"></listheader>-->
+                        <listheader label="充值日期"></listheader>
+                        <listheader id="operateHeader" visible="false" label="操作"></listheader>
+                    </listhead>
+                    <template name="model">
+                        <listitem value="${each}">
+          <!--                  <listcell>
+                                <label value="${each.userCode}"></label>
+                            </listcell>-->
+                            <listcell>
+                                <label value="${each.userName}"></label>
+                            </listcell>
+                            <listcell label="${each.rechargePrice}">
+                            </listcell>
+
+             <!--               <listcell label="${each.rechargeDetail}">
+                            </listcell>-->
+
+                            <listcell>
+                                <datebox readonly="true" value="${each.createTime}" buttonVisible="false"
+                                         format="yy/M/d HH:mm:ss" width="150px"></datebox>
+                            </listcell>
+                            <listcell>
+                                <hbox>
+                                    <button label="撤销" forward="onClick=onCancelRecharge"></button>
+                                </hbox>
+                            </listcell>
+                        </listitem>
+                    </template>
+                </listbox>
+            </panelchildren>
+        </panel>
+    </window>
+</zk>

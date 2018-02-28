@@ -1,0 +1,54 @@
+<?page title="饭团GO 0.1" contentType="text/html;charset=UTF-8"?>
+<zk>
+    <window id="loginWin" position="center" droppable="true" border="normal" height="200px" width="300px"
+            minheight="200" minwidth="260" sizable="true" mode="overlapped"
+        apply="com.littlehui.fantuan.controller.login.LoginController">
+<!--
+        <borderlayout>
+            <north border="none" height="40%">
+            </north>
+            <west border="none" width="40%"></west>
+            <center vflex="1" hflex="1" border="none">
+                <window vflex="1" hflex="1" border="normal" draggable="true" maximizable="true" sizable="true" minheight="300" minwidth="300">
+
+                </window>
+            </center>
+            <east border="none" width="40%"></east>
+            <south  border="none" height="40%"></south>
+        </borderlayout>
+-->
+        <panel hflex="1" vflex="1">
+            <panelchildren>
+                <grid height="80%" width="100%">
+                    <columns sizable="true">
+                        <column label="" sortAscending="&#36;{asc}"
+                                sortDescending="&#36;{dsc}" width="50px"/>
+                        <column label=""/>
+                    </columns>
+                    <rows vflex="1">
+                        <row spans="2,2" height="80px">
+                            <div align="center">
+                                <label value="账号:"/>
+                            </div>
+                            <textbox id="userCode" width="99%"/>
+                        </row>
+                        <row spans="2,2" height="80px">
+                            <div align="center">
+                                <label value="密码："></label>
+                            </div>
+                            <textbox id="passWord" width="99%" type="password"/>
+                        </row>
+                    </rows>
+                </grid>
+                <div></div>
+                <hbox width="100%" widths="30%,50%" align="center" pack="center">
+                    <button id="cancel" label="清空"></button>
+                    <button id="submit" label="登录"></button>
+                    <button id="visitor" label="我是游客"></button>
+                </hbox>
+            </panelchildren>
+        </panel>
+
+
+    </window>
+</zk>

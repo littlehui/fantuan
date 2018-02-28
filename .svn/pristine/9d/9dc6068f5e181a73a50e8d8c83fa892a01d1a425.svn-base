@@ -1,0 +1,92 @@
+<?page title="饭团GO 0.5" contentType="text/html;charset=UTF-8"?>
+<zk>
+    <window id="indexWin"  apply="com.littlehui.fantuan.controller.IndexController"
+            vflex="1" hflex="1">
+        <borderlayout>
+            <north title="" height="80px" style="background-color:#314d60" border="none">
+                <borderlayout>
+                    <west width="20%" border="none" style="background-color:#314d60" >
+                        <vlayout width="100%">
+                            <div height="5px"></div>
+                            <hbox align="end" hflex="1" vflex="1">
+                                <div width="15px"></div>
+                                <label value="饭团GO" style="font-size:40px; font-weight:900; color:#FFFFFF;"/>
+                            </hbox>
+                        </vlayout>
+                    </west>
+                    <center border="none" style="background-color:#314d60" >
+                        <div></div>
+                    </center>
+                    <east width="20%" border="none" style="background-color:#314d60" >
+                        <vlayout>
+                            <div height="30px"></div>
+                            <hbox align="right" pack="end">
+                                <div width="40px"></div>
+                                <label value="欢迎:" style=" color:#FFFFFF;"></label>
+                                <label value="登录用户" id="loginUserName" style=" color:#FFFFFF;"></label>
+                                <toolbarbutton id="logOutToolbarButton" label="登出" style=" color:#FFFFFF;">
+                                </toolbarbutton>
+                                <toolbarbutton id="changePassword" label="更改密码" style=" color:#FFFFFF;">
+                                </toolbarbutton>
+                            </hbox>
+                        </vlayout>
+                    </east>
+                </borderlayout>
+
+                <!--             <toolbar style="background-color:#314d60">
+                sclass="z-valign-bottom"
+                                 <borderlayout>
+                                     <west width="50%">
+                                         <hlayout sclass="z-valign-bottom">
+                                             <label value="饭团GO" style="font-size:40px; font-weight:900; color:#FFFFFF;"/>
+                                             <hbox width="100%" align="end" pack="end" sclass="z-valign-bottom">
+                                                 <label value="欢迎:" style=" color:#FFFFFF;"></label>
+                                                 <label value="登录用户" id="loginUserName" style=" color:#FFFFFF;"></label>
+                                                 <toolbarbutton id="logOutToolbarButton" label="登出" style=" color:#FFFFFF;">
+                                                 </toolbarbutton>
+                                                 <toolbarbutton id="changePassword" label="更改密码" style=" color:#FFFFFF;">
+                                                 </toolbarbutton>
+                                             </hbox>
+                                         </hlayout>
+                                     </west>
+
+                                     <center></center>
+                                 </borderlayout>
+
+                             </toolbar>-->
+
+
+            </north>
+            <center title="" style="filter:alpha(opacity=50)" border="none">
+                <borderlayout vflex="1" hflex="1">
+                    <!-- <west collapsible="true" splittable="true" size="10%">
+                         <include src="/zul/mvc/rechargeRange.zul"></include>
+                     </west>-->
+                    <center>
+                        <borderlayout>
+                            <north height="50%" border="none">
+                                <include id="userPriceListInclude" src="/zul/mvc/userPriceList.zul" height="100%"></include>
+
+                            </north>
+                            <south height="50%" border="none">
+                                <include id="userPriceLogInclude" src="/zul/mvc/userPriceLog.zul"  height="100%"></include>
+                            </south>
+                        </borderlayout>
+                    </center>
+                    <!--    <east collapsible="true" splittable="true" size="10%">
+                            <include src="/zul/mvc/consumeRange.zul"></include>
+                        </east>-->
+                </borderlayout>
+
+            </center>
+            <!--         <south title="">
+                         <div vflex="1" hflex="1">
+                             <label value="您正在使用饭团GO"
+                                    style="color:black;font-size:20px"/>
+                         </div>
+                     </south>-->
+        </borderlayout>
+        <panel>
+        </panel>
+    </window>
+</zk>

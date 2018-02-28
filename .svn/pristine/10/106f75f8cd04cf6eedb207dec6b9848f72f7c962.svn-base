@@ -1,0 +1,63 @@
+<?page title="饭团GO 1.0" contentType="text/html;charset=UTF-8"?>
+<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" root="./userPriceListWin"?>
+<zk>
+    <window id="userPriceListWin" title="" apply="com.littlehui.fantuan.controller.UserPriceListController">
+        <panel>
+            <panelchildren>
+                <toolbar>
+                    <toolbarbutton label="新增" id="addButton" visible="false"></toolbarbutton>
+                    <toolbarbutton label="删除" id="deleteButton" visible="false"></toolbarbutton>
+                    <textbox id="searchBox"></textbox>
+                    <button id="searchButton" label="查询"></button>
+                    <button id="cancelFocusButton" label="取消选中"></button>
+                    <button id="batchConsume" label="批量消费" visible="false"></button>
+                    <label value="饭团余额："></label>
+                    <label id="totalRemainPrice"></label>
+                </toolbar>
+                <listbox id="userPriceListBox" mold="paging" visible="true" checkmark="true" multiple="true" rows="5">
+                    <listhead>
+          <!--              <listheader label="账号"></listheader>-->
+                        <listheader label="名称"></listheader>
+                        <listheader label="可用余额"></listheader>
+                        <listheader label="消费总额"></listheader>
+                        <listheader label="转账总额"></listheader>
+                        <listheader label="更新时间"></listheader>
+                        <listheader id="operateHeader" label="操作" visible="false"></listheader>
+                    </listhead>
+                    <template name="model">
+                        <listitem value="${each}">
+              <!--              <listcell>
+                                <label value="${each.userCode}"></label>
+                            </listcell>-->
+                            <listcell>
+                                <label value="${each.userName}"></label>
+                            </listcell>
+                            <listcell label="${each.remainPrice}">
+                            </listcell>
+                            <listcell label="${each.consumePrice}">
+                            </listcell>
+                            <listcell label="${each.exchangePrice}">
+                            </listcell>
+                            <listcell>
+                                <datebox readonly="true" value="${each.updateTime}" buttonVisible="false"
+                                         format="yy/M/d HH:mm:ss" width="150px"></datebox>
+                            </listcell>
+                            <listcell>
+                                <hbox>
+                                    <button label="转账" forward="onClick=onExchange"></button>
+                                    <button label="消费" forward="onClick=onConsume"></button>
+                                    <button label="充值" forward="onClick=onRecharge"></button>
+                                </hbox>
+                            </listcell>
+                        </listitem>
+                        <!--                <template name="model">
+                                            <listitem label="@load(each)" />
+                                        </template>-->
+                    </template>
+
+                </listbox>
+            </panelchildren>
+        </panel>
+    </window>
+
+</zk>

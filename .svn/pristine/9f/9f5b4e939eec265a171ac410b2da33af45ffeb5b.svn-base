@@ -1,0 +1,15 @@
+<zk>
+    <window id="exchangeEditWin" title="转账页面">
+        <panel>
+            <panelchildren>
+                <hlayout>
+                    <label value="转给："></label>
+                    <combobox></combobox>
+                    <label value="金额："></label>
+                    <decimalbox id="exchangePrice"></decimalbox>
+                    <button id="exchangeSubmit" label="转账"></button>
+                </hlayout>
+            </panelchildren>
+        </panel>
+    </window>
+</zk>

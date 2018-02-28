@@ -1,0 +1,56 @@
+<zk>
+    <window apply="org.zkoss.bind.BindComposer" id="userPriceListWin"
+            viewModel="@id('indexWin') @init('com.littlehui.fantuan.model.IndexViewModel')">
+        <panel>
+            <panelchildren>
+                <listbox model="@bind(indexWin.userPriceVoListModel)" hflex="1"
+                selectedItem="@bind(indexWin.selectedPriceVB)">
+                    <listhead>
+                        <listheader label="账号"></listheader>
+                        <listheader label="名称"></listheader>
+                        <listheader label="可用余额"></listheader>
+                        <listheader label="消费总额"></listheader>
+                        <listheader label="转账总额"></listheader>
+                        <listheader label="更新时间"></listheader>
+                        <listheader label="操作"></listheader>
+                    </listhead>
+                    <template name="model">
+                        <listitem>
+                            <listcell>
+                                <label value="@bind(each.userCode)"></label>
+                            </listcell>
+                            <listcell>
+                                <label value="@bind(each.userName)"></label>
+                            </listcell>
+                            <listcell>
+                                <label value="@bind(each.remainPrice)"></label>
+                            </listcell>
+                            <listcell>
+                                <label value="@bind(each.consumePrice)"></label>
+                            </listcell>
+                            <listcell>
+                                <label value="@bind(each.exchangePrice)"></label>
+                            </listcell>
+                            <listcell>
+                                <datebox buttonVisible="false" readonly="true" value="@bind(each.updateTime)"
+                                         format="yy/M/d HH:mm:ss" width="150px"></datebox>
+                            </listcell>
+                            <listcell>
+                                <hbox>
+                                    <button label="转账" onClick="@command('exchange', item=each)"></button>
+                                    <button label="消费" onClick="@command('consume', item=each)"></button>
+                                    <button label="充值" onClick="@command('recharge', item=each)"></button>
+                                </hbox>
+                            </listcell>
+                        </listitem>
+
+                    </template>
+                    <!--                <template name="model">
+                                        <listitem label="@load(each)" />
+                                    </template>-->
+                </listbox>
+            </panelchildren>
+        </panel>
+    </window>
+
+</zk>

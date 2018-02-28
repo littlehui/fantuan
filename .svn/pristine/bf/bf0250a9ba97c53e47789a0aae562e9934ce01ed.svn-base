@@ -1,0 +1,4 @@
+com\littlehui\fantuan\vo\UserPriceVo.class
+com\littlehui\fantuan\composer\IndexComposer.class
+com\littlehui\fantuan\model\IndexViewModel.class
+com\littlehui\fantuan\web\ContextLoaderListenerManager.class

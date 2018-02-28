@@ -1,0 +1,31 @@
+<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" root="./exchangeEditWin"?>
+<zk>
+    <window id="exchangeEditWin" title="转账页面" apply="com.littlehui.fantuan.controller.exchange.ExchangeEditorController">
+        <panel>
+            <panelchildren>
+                <vlayout>
+                    <label value="转给："></label>
+                    <combobox id="userCombobox" mold="${each}" readonly="true" constraint="no empty">
+                        <template name="model">
+                            <comboitem value="${each.userCode}" label="${each.userName}" width="200px">
+                            </comboitem>
+                        </template>
+                    </combobox>
+                    <listbox id="userListBox" mold="select" visible="false">
+                        <template name="model">
+                            <listitem value="${each}">
+                                <listcell label="${each.userName}"></listcell>
+                            </listitem>
+                        </template>
+                    </listbox>
+                    <label value="金额："></label>
+                    <decimalbox id="exchangePrice" constraint="no negative:只能为数字，不能为负">
+                    </decimalbox>
+                    <label value="转账详情："></label>
+                    <textbox  multiline="true" id="exchangeDetail" height="100px"></textbox>
+                    <button id="exchangeSubmit" label="转账"></button>
+                </vlayout>
+            </panelchildren>
+        </panel>
+    </window>
+</zk>

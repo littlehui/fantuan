@@ -1,0 +1,43 @@
+/*
+Navicat MySQL Data Transfer
+
+Source Server         : fantuan
+Source Server Version : 50550
+Source Host           : 192.168.31.201:33306
+Source Database       : fantuan
+
+Target Server Type    : MYSQL
+Target Server Version : 50550
+File Encoding         : 65001
+
+Date: 2016-10-31 00:41:43
+*/
+
+SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for t_user_leader
+-- ----------------------------
+DROP TABLE IF EXISTS `t_user_leader`;
+CREATE TABLE `t_user_leader` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_code` varchar(64) COLLATE utf8_bin NOT NULL,
+  `leader_key` varchar(32) COLLATE utf8_bin NOT NULL,
+  `leader_start_time` bigint(20) NOT NULL,
+  `leader_end_time` bigint(20) NOT NULL,
+  `update_time` bigint(20) DEFAULT NULL,
+  `create_time` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `t_use_leader_id_uindex` (`id`),
+  UNIQUE KEY `t_use_leader_leader_key_uindex` (`leader_key`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+INSERT into t_user_leader (user_code, leader_key, leader_start_time, leader_end_time, update_time, create_time) values('xiaohuichen_17173@cyou-inc.com', 0, '1475251200000', '1477929600000', '1477878761000', '1477878761000');
+
+INSERT into t_user_leader (user_code, leader_key, leader_start_time, leader_end_time, update_time, create_time) values('yuxiangchen@cyou-inc.com', '1', '1477756800000', '1480521600000', '1477878761000', '1477878761000');
+INSERT into t_user_leader (user_code, leader_key, leader_start_time, leader_end_time, update_time, create_time) values('jianchen@cyou-inc.com', '2', '1480521600000', '1483027200000', '1477878761000', '1477878761000');
+INSERT into t_user_leader (user_code, leader_key, leader_start_time, leader_end_time, update_time, create_time) values('jiangwang@cyou-inc.com', '3', '1483027200000', '1485705600000', '1477878761000', '1477878761000');
+--
+--password --123123
+--4297f44b13955235245b2497399d7a93
+--
