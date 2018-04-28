@@ -1,4 +1,4 @@
-<?page title="饭团GO 1.0" contentType="text/html;charset=UTF-8"?>
+<?page title="饭团GO 0.5" contentType="text/html;charset=UTF-8"?>
 <?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" root="./userListWin"?>
 <zk>
     <window id="userListWin" title="" apply="com.littlehui.fantuan.controller.user.UserListController">
