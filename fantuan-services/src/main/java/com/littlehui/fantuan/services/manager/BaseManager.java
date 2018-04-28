@@ -14,6 +14,7 @@ public class BaseManager<T> extends DefaultSqlRepository<T> {
 
     protected BaseDAO<T> baseDAO;
 
+    @Override
     protected BaseDAO<T> getDAO() {
         if (baseDAO != null) {
             return baseDAO;
@@ -22,11 +23,12 @@ public class BaseManager<T> extends DefaultSqlRepository<T> {
         }
     }
 
-    public void save(T t) {
+    public T save(T t) {
         if (ObjectBeanUtils.getPropertyValue(t, DEFAULT_ID_COLUMN) == null) {
-            this.insert(t);
+            return this.insert(t);
         } else {
             this.update(t);
+            return t;
         }
     }
 }

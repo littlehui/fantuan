@@ -36,4 +36,11 @@ public class UserPriceVBManager extends BaseMultiRepository<UserPriceVB> {
         multiQuery.addLike("userName", userName);
         return this.findByQuery(multiQuery);
     }
+
+    public List<UserPriceVB> queryVBListExcGod() {
+        MultiQuery multiQuery = MultiQuery.build(UserPriceVB.class);
+        multiQuery.addFieldEq("userCode", "userCode");
+        multiQuery.addEq("godFlag", false);
+        return this.findByQuery(multiQuery);
+    }
 }

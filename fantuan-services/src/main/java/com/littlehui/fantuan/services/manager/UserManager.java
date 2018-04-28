@@ -1,14 +1,10 @@
 package com.littlehui.fantuan.services.manager;
 
 import com.cyou.fz.commons.mybatis.selecterplus.mybatis.bean.Query;
-import com.littlehui.fantuan.common.util.EncryptUtil;
 import com.littlehui.fantuan.services.bean.User;
-import com.littlehui.fantuan.services.bean.UserPrice;
 import com.littlehui.fantuan.services.dao.UserDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
-import java.util.List;
 
 /**
  * Created by Administrator on 2016/10/3 0003.

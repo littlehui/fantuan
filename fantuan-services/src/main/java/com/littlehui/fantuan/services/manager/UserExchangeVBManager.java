@@ -21,11 +21,4 @@ public class UserExchangeVBManager extends BaseMultiRepository<UserExchangeVB> {
         return this.findByQuery(multiQuery);
     }
 
-    public List<UserExchangeVB> queryAll() {
-        MultiQuery multiQuery = MultiQuery.build(UserExchangeVB.class);
-        multiQuery.addFieldEq("sourceUserCode", "userCode");
-        multiQuery.addOrder("createTime", Query.DBOrder.DESC);
-        return this.findByQuery(multiQuery);
-    }
-
 }

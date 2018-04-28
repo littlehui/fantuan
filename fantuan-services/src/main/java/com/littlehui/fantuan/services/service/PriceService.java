@@ -48,6 +48,10 @@ public class PriceService {
         return userPriceVBManager.queryAll();
     }
 
+    public List<UserPriceVB> queryVBListExcGod() {
+        return userPriceVBManager.queryVBListExcGod();
+    }
+
     public List<UserPriceVB> queryByUserName(String userName) {
         return userPriceVBManager.queryByUserName(userName);
     }

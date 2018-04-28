@@ -18,6 +18,9 @@ public class User {
     private String userCode;
     private String userName;
     private String password;
+    private Boolean godFlag;
+    private String email;
+    private String mobile;
     private Long createTime;
     private Long updateTime;
 }

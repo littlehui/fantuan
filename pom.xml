@@ -14,6 +14,7 @@
         <module>fantuan-common</module>
         <module>fantuan-zk-addition</module>
     </modules>
+    <!--
     <repositories>
         <repository>
             <id>netmine-repos</id>
@@ -40,7 +41,7 @@
             <url>http://netmine.vicp.net:8081/nexus/content/repositories/snapshots</url>
         </snapshotRepository>
     </distributionManagement>
-
+-->
     <build>
         <plugins>
             <!-- 设置jdk编译版本 -->

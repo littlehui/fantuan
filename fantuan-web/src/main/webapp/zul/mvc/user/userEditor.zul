@@ -1,8 +1,37 @@
 <zk>
-    <window id="userEditorWin" title="编辑用户页面" apply="com.littlehui.fantuan.controller.recharge.RechargeEditorController">
+    <window id="userEditorWin" title="编辑用户页面" apply="com.littlehui.fantuan.controller.user.UserEditorController">
         <panel>
             <panelchildren>
-
+                <vlayout>
+                    <hbox>
+                        <label value="用户名"></label>
+                        <textbox id="userName"></textbox>
+                    </hbox>
+                    <hbox>
+                        <label value="账号"></label>
+                        <textbox id="userCode" constraint="no empty: 不能为空"></textbox>
+                    </hbox>
+                    <hbox>
+                        <label value="邮箱">
+                        </label>
+                        <textbox id="email" constraint="no empty: 不能为空"></textbox>
+                    </hbox>
+                    <hbox>
+                        <label value="电话"></label>
+                        <textbox id="mobile" constraint="no empty: 不能为空"></textbox>
+                    </hbox>
+                    <hbox>
+                        <label value="接团开始时间"></label>
+                        <datebox id="leaderStartTime"></datebox>
+                    </hbox>
+                    <hbox>
+                        <label value="接团结束时间"></label>
+                        <datebox id="leaderEndTime"></datebox>
+                    </hbox>
+                    <hbox>
+                        <button id="saveCommit" label="提交"></button>
+                    </hbox>
+                </vlayout>
             </panelchildren>
         </panel>
     </window>

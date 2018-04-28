@@ -1,0 +1,14 @@
+<?page title="饭团GO 0.5" contentType="text/html;charset=UTF-8"?>
+<zk>
+    <window
+            vflex="1" hflex="1">
+        <borderlayout>
+            <south title="">
+                <div vflex="1" hflex="1">
+                    <label value="您正在使用饭团GO"
+                           style="color:black;font-size:20px"/>
+                </div>
+            </south>
+        </borderlayout>
+    </window>
+</zk>

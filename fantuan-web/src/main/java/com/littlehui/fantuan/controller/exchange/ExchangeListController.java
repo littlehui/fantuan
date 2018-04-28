@@ -44,6 +44,7 @@ public class ExchangeListController extends BindListenerForwardComposer {
 
     PriceService priceService = ApplicationContextUtil.getBean(PriceService.class);
 
+    @Override
     protected void bindListener(Component component) {
         // do nothing
         component.addEventListener("onCancelExchange", new EventListener<Event>() {

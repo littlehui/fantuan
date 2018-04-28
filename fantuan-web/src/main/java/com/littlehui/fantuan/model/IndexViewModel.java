@@ -63,7 +63,7 @@ public class IndexViewModel implements Serializable {
     }
 
     private void showUserPrice() {
-        userPriceVoList = priceService.queryAllVBList();
+        userPriceVoList = priceService.queryVBListExcGod();
         userPriceVoListModel = new ListModelList<>(userPriceVoList);
     }
 

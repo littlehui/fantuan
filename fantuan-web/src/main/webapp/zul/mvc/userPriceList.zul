@@ -40,7 +40,7 @@
                             </listcell>
                             <listcell>
                                 <datebox readonly="true" value="${each.updateTime}" buttonVisible="false"
-                                         format="yy/M/d HH:mm:ss" width="150px"></datebox>
+                                         format="yyyy/MM/dd HH:mm:ss" width="150px"></datebox>
                             </listcell>
                             <listcell>
                                 <hbox>

@@ -5,5 +5,6 @@ package com.littlehui.fantuan.services.constants;
  */
 public enum OperateEnum {
     UN_RECHARGE
-    ,UN_EXCHANGE,UN_CONSUME;
+    ,UN_EXCHANGE,UN_CONSUME,
+    DELETE_USER, DELETE_PRICE, DELETE_LEADER;
 }

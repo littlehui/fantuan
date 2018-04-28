@@ -3,6 +3,7 @@ package com.littlehui.fantuan.services.manager;
 import com.cyou.fz.commons.mybatis.selecterplus.mybatis.bean.Query;
 import com.littlehui.fantuan.services.bean.UserPrice;
 import com.littlehui.fantuan.services.dao.UserPriceDAO;
+import com.littlehui.fantuan.services.vbean.UserPriceVB;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -18,6 +19,7 @@ public class UserPriceManager extends BaseManager<UserPrice> {
     @Autowired
     UserPriceDAO userPriceDAO;
 
+    @Override
     public void initSqlRepository() {
         super.initSqlRepository();
         //this.addSqlByName("countTotalRemainPrice", "select sum(remain_price) from t_user_price");
@@ -41,4 +43,5 @@ public class UserPriceManager extends BaseManager<UserPrice> {
         BigDecimal result = userPriceDAO.countTotalRemainPrice();
         return result;
     }
+
 }

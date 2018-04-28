@@ -32,4 +32,10 @@ public class UserLeaderManager extends BaseManager<UserLeader> {
         query.addEq("leaderEndTime", endMills);
         this.removeByQuery(query);
     }
+
+    public void deleteUserLeader(String userCode) {
+        Query query = Query.build(UserLeader.class);
+        query.addEq("userCode", userCode);
+        this.removeByQuery(query);
+    }
 }

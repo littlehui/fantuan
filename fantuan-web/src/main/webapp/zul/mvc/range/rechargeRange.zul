@@ -1,0 +1,8 @@
+<zk>
+    <window title="充值排行" id="rechargeRangeWin" vflex="1" hflex="1">
+        <panel>
+            <panelchildren>
+            </panelchildren>
+        </panel>
+    </window>
+</zk>

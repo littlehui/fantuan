@@ -88,4 +88,16 @@ public class WebConext {
         getSession().removeAttribute(LOGIN_NAME);
         getSession().removeAttribute(IS_LEADER);
     }
+
+    public static Boolean loginAsGod() {
+        User user = WebConext.getLoginUser();
+        if (user == null) {
+            return false;
+        }
+        return user.getGodFlag();
+    }
+
+    public static String getRemoteIp() {
+        return Executions.getCurrent().getRemoteAddr();
+    }
 }

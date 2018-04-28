@@ -1,0 +1,8 @@
+<zk>
+    <window title="统计" id="rangeIndexWin" vflex="1" hflex="1">
+        <panel>
+            <panelchildren>
+            </panelchildren>
+        </panel>
+    </window>
+</zk>

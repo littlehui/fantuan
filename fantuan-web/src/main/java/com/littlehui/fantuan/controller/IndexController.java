@@ -34,6 +34,7 @@ public class IndexController extends BindListenerForwardComposer {
         // bindEvent(comp);
     }
 
+    @Override
     protected void bindListener(Component component) {
         ConventionWires.wireVariables(component, indexBean);
         // do nothing
@@ -46,7 +47,7 @@ public class IndexController extends BindListenerForwardComposer {
     }
 
     public void onCreate$indexWin() {
-        indexBean.getLoginUserName().setValue(WebConext.getLoginName());
+        //indexBean.getLoginUserName().setValue(WebConext.getLoginName());
     }
 
     public void onClick$logOutToolbarButton() {

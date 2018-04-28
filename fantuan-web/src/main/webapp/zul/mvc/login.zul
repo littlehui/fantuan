@@ -1,6 +1,5 @@
 <?page title="饭团GO 1.0" contentType="text/html;charset=UTF-8"?>
 <?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" root="./loginWindow"?>
-
 <zk>
     <window id="loginWindow" position="center" droppable="true" border="normal" height="200px" width="300px"
             minheight="200" minwidth="260" sizable="true" mode="overlapped">
