@@ -1,3 +1,0 @@
-ALTER TABLE `t_exchange`
-ADD COLUMN `exchange_detail`  varchar(255) NULL COMMENT '备注' AFTER `des_user_code`;
-

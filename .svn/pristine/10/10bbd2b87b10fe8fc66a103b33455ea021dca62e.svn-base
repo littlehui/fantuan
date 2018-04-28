@@ -1,9 +1,0 @@
-<zk>
-    <window id="userEditorWin" title="编辑用户页面" apply="com.littlehui.fantuan.controller.recharge.RechargeEditorController">
-        <panel>
-            <panelchildren>
-
-            </panelchildren>
-        </panel>
-    </window>
-</zk>

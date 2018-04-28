@@ -1,7 +1,0 @@
-<!-- zk.xml -->
-<zk>
-    <library-property>
-        <name>org.zkoss.theme.preferred</name>
-        <value>atlantic</value> <!-- or silvertail, atlantic  sapphire-->
-    </library-property>
-</zk>

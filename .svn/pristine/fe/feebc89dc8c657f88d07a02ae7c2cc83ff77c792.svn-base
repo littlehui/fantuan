@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="fantuan-web:war">
-    <output-path>$PROJECT_DIR$/fantuan-web/target</output-path>
-    <root id="archive" name="fantuan-web.war">
-      <element id="artifact" artifact-name="fantuan-web:war exploded" />
-    </root>
-  </artifact>
-</component>
