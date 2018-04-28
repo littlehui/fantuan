@@ -35,6 +35,17 @@ public class UserPriceVB {
     @Table("t_user_price")
     @Column("update_time")
     private Long updateTime;
+    @Table("t_user")
+    @Column("god_flag")
+    private Boolean godFlag;
+
+    public Boolean getGodFlag() {
+        return godFlag;
+    }
+
+    public void setGodFlag(Boolean godFlag) {
+        this.godFlag = godFlag;
+    }
 
     public String getUserCode() {
         return userCode;

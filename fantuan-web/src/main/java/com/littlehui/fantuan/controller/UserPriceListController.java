@@ -186,7 +186,7 @@ public class UserPriceListController extends GenericForwardComposer {
     }
 
     private void showUserPrice() {
-        userPriceVoList = priceService.queryAllVBList();
+        userPriceVoList = priceService.queryVBListExcGod();
         userPriceVoListModel = new ListModelList(userPriceVoList);
         showUserPrices(userPriceVoListModel);
     }
